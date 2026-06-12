@@ -8,6 +8,9 @@
 - Pydantic 2.13.4
 - PyJWT 2.13.0
 - Pandas 3.0.3
+- Docker
+- Kubernetes
+- Jenkins
 
 ## Структура репозитория
 
