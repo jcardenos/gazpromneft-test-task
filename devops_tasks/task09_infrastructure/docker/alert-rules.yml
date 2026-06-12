@@ -1,0 +1,11 @@
+groups:
+  - name: webapp
+    rules:
+      - alert: WebAppDown
+        expr: probe_success == 0
+        for: 15s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Web app is down"
+          description: "Blackbox exporter cannot reach /health"

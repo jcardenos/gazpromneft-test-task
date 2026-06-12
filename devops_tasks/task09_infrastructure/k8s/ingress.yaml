@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: task09-webapp
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: task09.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: task09-webapp
+                port:
+                  number: 8000

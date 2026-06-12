@@ -15,7 +15,7 @@ async def hello(test: str | None = Header(default=None, alias="Test")):
 @app.get("/health", response_class=PlainTextResponse)
 async def health():
     result = subprocess.run(
-        ["ping", "-c", "1", "-W", "2", "77.88.8.8"],
+        ["/usr/bin/ping", "-c", "1", "-W", "2", "77.88.8.8"],
         capture_output=True,
         text=True,
     )

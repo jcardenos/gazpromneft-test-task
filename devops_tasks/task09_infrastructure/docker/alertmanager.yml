@@ -1,0 +1,10 @@
+global: {}
+
+route:
+  receiver: local-webhook
+
+receivers:
+  - name: local-webhook
+    webhook_configs:
+      - url: http://alert-receiver:9000/
+
